@@ -2,10 +2,14 @@ package pl.jzajas.ecommerce.sales;
 
 import org.junit.jupiter.api.Test;
 import pl.jzajas.ecommerce.sales.cart.HashMapCartStorage;
+import pl.jzajas.ecommerce.sales.offering.Offer;
+import pl.jzajas.ecommerce.sales.offering.OfferCalculator;
+import pl.jzajas.ecommerce.sales.reservation.ReservationRepository;
+import pl.jzajas.ecommerce.sales.reservation.SpyPaymentGateway;
 
 import java.math.BigDecimal;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 public class SalesTest {
 
@@ -49,7 +53,12 @@ public class SalesTest {
     }
 
     private SalesFacade thereIsSales() {
-        return new SalesFacade(new HashMapCartStorage());
+        return new SalesFacade(
+                new HashMapCartStorage(),
+                new OfferCalculator(),
+                new SpyPaymentGateway(),
+                new ReservationRepository()
+        );
     }
 
     private String thereIsCustomer(String name) {

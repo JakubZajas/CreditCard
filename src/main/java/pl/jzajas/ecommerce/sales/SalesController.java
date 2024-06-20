@@ -1,6 +1,9 @@
 package pl.jzajas.ecommerce.sales;
 
 import org.springframework.web.bind.annotation.*;
+import pl.jzajas.ecommerce.sales.offering.Offer;
+import pl.jzajas.ecommerce.sales.reservation.AcceptOfferRequest;
+import pl.jzajas.ecommerce.sales.reservation.ReservationDetails;
 
 @RestController
 public class SalesController {

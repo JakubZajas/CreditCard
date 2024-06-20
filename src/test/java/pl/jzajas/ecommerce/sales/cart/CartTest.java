@@ -1,6 +1,8 @@
 package pl.jzajas.ecommerce.sales.cart;
 
 import org.junit.jupiter.api.Test;
+import pl.jzajas.ecommerce.sales.cart.Cart;
+import pl.jzajas.ecommerce.sales.cart.CartItem;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

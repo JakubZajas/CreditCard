@@ -3,7 +3,7 @@ package pl.jzajas.ecommerce.catalog;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class Product {
+public class  Product {
     private final String id;
     private final String name;
     private final String description;
